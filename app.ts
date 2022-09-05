@@ -1,92 +1,73 @@
-// function add(a:number,b:number):number
-// {
-//     return a+b;
-// }
+let a = 10;
+a = 'Hello';
+a = true;
+a = {
+    name : 'abc',
+    age : 24
+};
 
-// console.log(add(1,2));
+console.log(a.name);
 
-// var concept
+a = [1,2,3,4];
+a.forEach(a => console.log(a));
 
-// var a = 10;
-// console.log(window.a);
+//number type
 
-// let a = 10;
-// console.log(window.a);
-
-// var a = 10;
-// var a = 20;
-// console.log(a);
-
-
-// let a = 10;
-// let a = 20;
-// console.log(a);
-
-
-// var a = 10;
-// function f()
-// {
-//     console.log(a);
-// }
-// f();
-
-// within function 
-// var a = 10;
-// function f()
-// {
-//     var a = 20;
-//     return a;
-// }
-// console.log(f());
-
-
-// within anther  function 
-
-// function f()
-// {
-//     var a = 10;
-//     return function g(){
-//         var b =a+1;
-//         return b;
-//     };
-//     }
-//     var g = f();
-//     console.log(g());
-
-// function f(shouldInitialized:boolean):number | undefined
-// {
-//     if(shouldInitialized)
-//     {
-//         var x = 10;
-//     }
-//     return x;
-// }
-
-// console.log(f(true));
-// console.log(f(false));
-
-// Duplicate identifier  for let
-
-// function f(d:number)
-// {
-//     let d = 10;
-//     return d;
-// }
-// f(1);
-
-function sumMatrix(matrix:number[][])
+let n1 = 30;
+let n2 = 30;
+let add = (c:number,d:number):number =>
 {
-    var sum = 0;
-    for(let i = 0; i < matrix.length; i++)
-    {
-       var currentRow = matrix[i];
-
-       for(let i = 0; i < matrix.length; i++)
-       {
-        sum+currentRow[i];
-       }
-       return sum;
-    }
+    return c+d;
 }
-console.log(sumMatrix([[1,2,3],[4,5,6]]));
+console.log(add(n1,n2));
+
+//string type 
+
+let s1 : string;
+s1 = 'santhiyapapa';
+let greet = (a:string) : string =>
+{
+    return `${a} Welcome Back!`;
+};
+
+console.log(greet(s1));
+
+//boolean type
+
+let b:boolean = true;
+
+//null and undefined type
+
+let a:undefined = undefined;
+let b:null = null;
+let n:number = 10;
+let n2:number = undefined;
+let s:string = null;
+
+//BigInit type 
+
+let u:bigint = BigInt(10);
+let w:bigint = 100n;
+
+
+//Array type
+
+let arr1:number[] = [1,2,3];
+let arr2:Array<number> = [1,2,3];
+let arr3: number,string = [1,2,3,4];
+//union type array 
+let arr4:(number | string | boolean) [] = [1,'a1',true,2,'a2',true,3,'a3',true];
+
+arr1[0] = 2; 
+arr4[0] = 'Hello';
+
+//print for squantially
+ arr4.forEach(a => console.log(a));
+
+ //multi deminision array 
+let mul :(number | string | boolean)[][] = [[1,2,3],[1,2,3],[1,2,3]];
+mul.forEach(a1 => {
+     a1.forEach(a2 => console.log(a2));
+});
+
 

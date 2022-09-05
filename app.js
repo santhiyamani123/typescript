@@ -1,69 +1,50 @@
-// function add(a:number,b:number):number
-// {
-//     return a+b;
-// }
-// console.log(add(1,2));
-// var concept
-// var a = 10;
-// console.log(window.a);
-// let a = 10;
-// console.log(window.a);
-// var a = 10;
-// var a = 20;
-// console.log(a);
-// let a = 10;
-// let a = 20;
-// console.log(a);
-// var a = 10;
-// function f()
-// {
-//     console.log(a);
-// }
-// f();
-// within function 
-// var a = 10;
-// function f()
-// {
-//     var a = 20;
-//     return a;
-// }
-// console.log(f());
-// within anther  function 
-// function f()
-// {
-//     var a = 10;
-//     return function g(){
-//         var b =a+1;
-//         return b;
-//     };
-//     }
-//     var g = f();
-//     console.log(g());
-// function f(shouldInitialized:boolean):number | undefined
-// {
-//     if(shouldInitialized)
-//     {
-//         var x = 10;
-//     }
-//     return x;
-// }
-// console.log(f(true));
-// console.log(f(false));
-// Duplicate identifier  for let
-// function f(d:number)
-// {
-//     let d = 10;
-//     return d;
-// }
-// f(1);
-function sumMatrix(matrix) {
-    var sum = 0;
-    for (var i = 0; i < matrix.length; i++) {
-        var currentRow = matrix[i];
-        for (var i_1 = 0; i_1 < matrix.length; i_1++) {
-            sum + currentRow[i_1];
-        }
-        return sum;
-    }
-}
-console.log(sumMatrix([[1, 2, 3], [4, 5, 6]]));
+var a = 10;
+a = 'Hello';
+a = true;
+a = {
+    name: 'abc',
+    age: 24
+};
+console.log(a.name);
+a = [1, 2, 3, 4];
+a.forEach(function (a) { return console.log(a); });
+//number type
+var n1 = 30;
+var n2 = 30;
+var add = function (c, d) {
+    return c + d;
+};
+console.log(add(n1, n2));
+//string type 
+var s1;
+s1 = 'santhiyapapa';
+var greet = function (a) {
+    return "".concat(a, " Welcome Back!");
+};
+console.log(greet(s1));
+//boolean type
+var b = true;
+//null and undefined type
+var a = undefined;
+var b = null;
+var n = 10;
+var n2 = undefined;
+var s = null;
+//BigInit type 
+var u = BigInt(10);
+var w = 100n;
+//Array type
+var arr1 = [1, 2, 3];
+var arr2 = [1, 2, 3];
+var arr3, string = [1, 2, 3, 4];
+//union type array 
+var arr4 = [1, 'a1', true, 2, 'a2', true, 3, 'a3', true];
+arr1[0] = 2;
+arr4[0] = 'Hello';
+//print for squantially
+arr4.forEach(function (a) { return console.log(a); });
+//multi deminision array 
+var mul = [[1, 2, 3], [1, 2, 3], [1, 2, 3]];
+mul.forEach(function (a1) {
+    a1.forEach(function (a2) { return console.log(a2); });
+});
