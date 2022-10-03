@@ -1,0 +1,12 @@
+<p>jsonuserdetails works!</p>
+
+
+<!-- <div>
+    {{jsonObject.firstName}},{{jsonObject.lastName}}
+</div> -->
+
+<ul>
+    <li *ngFor="let person of arrayObj; let i = index"> 
+      {{ i + 1 }} - The FullName is : {{ person.firstName}} - {{ person.lastName}}
+    </li>
+   </ul>
